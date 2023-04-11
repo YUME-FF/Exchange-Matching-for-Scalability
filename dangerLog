@@ -1,0 +1,9 @@
+1. We use pugixml as the XML parser, when it fails, server will not send message back.
+
+2. Our server cannot accept invalid XML format file, if an invalid XML message received, the corresponding thread will directly exit.
+
+3. Our server can only count BIGINT level Unique ID, logic error would happen if the order number exceeds BIGINT level
+
+4. We do not check the format of all types of data in requests because we assume that the client sends the correct format to the server. We only do some simple format checking. 
+
+5. Our server will clean all the tables in database when it is reset. Please be careful in restarting the server.

@@ -1,0 +1,6 @@
+<create>   
+    <account id="321" balance="10000"/> #0 or more   
+    <symbol sym="SYM"> #0 or more     
+        <account id="321">100</account> #1 or more   
+    </symbol> 
+</create> 

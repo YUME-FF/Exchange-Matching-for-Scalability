@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: passw0rd
+      POSTGRES_DB: exchange
+    ports:
+      - "5432:5432"
+    networks:
+      - app_network
+      
+  app:
+    build: .
+    container_name: app
+    ports:
+      - "12345:12345"
+    depends_on:
+      - postgres
+    networks:
+      - app_network
+
+networks:
+  app_network:

@@ -1,0 +1,7 @@
+<transactions id="321"> #contains 1 or more of the below children   
+    <query id="0"/>   
+    <order sym="SYM" amount="-30" limit="10"/>  
+    <query id="0"/> 
+    <cancel id="0"/>
+    <cancel id="99999"/> 
+</transactions> 
